@@ -1,8 +1,13 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const isDevelopment = process.env.NODE_ENV !== 'production';
+// criado variavel para identificar o ambiente se seria producao ou desenvolvimento
+
 module.exports = {
-  mode:'development',
+  mode: isDevelopment ? 'development' : 'production',
+  devtool: 'eval-source-map',
+  // source map no webpack serve no console eu ver exatamente o meu codigo original.
   entry: path.resolve(__dirname, 'src', 'index.jsx' ),
   output: {
     path: path.resolve(__dirname, 'dist'),
