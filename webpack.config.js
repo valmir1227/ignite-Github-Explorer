@@ -6,7 +6,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
-  devtool: 'eval-source-map',
+  devtool: isDevelopment ? 'eval-source-map' : 'source-map',
   // source map no webpack serve no console eu ver exatamente o meu codigo original.
   entry: path.resolve(__dirname, 'src', 'index.jsx' ),
   output: {
@@ -31,6 +31,11 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader', 
         //integracao do babel com webpack, yarn add babel-loader
+      },
+      {
+        test: /\.scss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'], 
       }
     ],
   }
