@@ -2,29 +2,74 @@ section.repository-list {
   margin: 40px;
 
   h1 {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #ff5714;
+    text-shadow: 1px 5px 4px rgba(0, 0, 0, 0.4);
   }
 
   ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    strong {
+      font-size: 18px;
+      margin: 0 20px;
+    }
 
     li {
+      width: 400px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-transform: capitalize;
+      text-align: center;
+
+      border-radius: 5px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      //Glass efect
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(1px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 1);
+
       & + li {
-        margin-top: 20px;
+        margin-top: 0px;
         // & quer dizer que toda vez que tiver um li antes de um li vai ter margin top
+        //margin-top: 20px;
       }
 
       p {
         font-size: 14px;
-        color: #444;
-        margin-top: 8px;
+        color: rgb(197, 197, 197);
+        margin: 20px;
       }
 
       a {
-        display: inline-block;
+        display: block;
         margin-top: 16px;
+        font-size: 16px;
         text-decoration: none;
-        color: #8257e6;
+        color: #fff;
+        background: #ff5714;
+        padding: 12px 22px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

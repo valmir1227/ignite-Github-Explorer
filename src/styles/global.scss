@@ -1,10 +1,17 @@
-*{
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  font: 16px  "Helvetica Neve", Arial, sans-serif;
-  color: #121214;
+body {
+  font: 16px "Helvetica Neve", Arial, sans-serif;
+  //background-color: rgb(0, 0, 0);
+   background-image: (url("https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
 }
